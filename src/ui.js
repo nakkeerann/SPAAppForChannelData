@@ -35,7 +35,6 @@ function updateUI(data, endpoint) {
                     listItem.setAttribute("href", "#list" + i)
                     listItem.setAttribute("role", "tab")
                     listItem.setAttribute("aria-controls", i)
-                    listItem.setAttribute("onclick","getreplies('"+i+"','"+d.id+"','https://graph.microsoft.com/beta/teams/{TEAM_ID}/channels/{CHANNELID}/messages/"+d.id+"/replies')")
                     listItem.innerHTML = "<b>"+d.from.user.displayName +":</b>"+ d.body.content;
                     tabList.appendChild(listItem)
                 }

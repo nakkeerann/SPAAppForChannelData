@@ -34,15 +34,3 @@ function chat() {
       });
   }
 }
-function getreplies(i, id, url) {
-  selectedChat = i;
-  selectedChatId = id;
-  if (myMSALObj.getAccount()) {
-    getTokenPopup(tokenRequest)
-      .then(response => {
-        callMSGraph(url, response.accessToken, updateUI);
-      }).catch(error => {
-        console.log(error);
-      });
-  }
-}
